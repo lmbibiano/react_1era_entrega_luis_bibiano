@@ -1,34 +1,34 @@
 import Item from '../Item/Item';
 import './itemlist.css';
-// import { Link } from 'react-router-dom';
-import Products from '../servermocks/servermocks';
+import { Link } from 'react-router-dom';
 
 
-// function ItemList({ items }) {
-//   return (
-//     <div className="listItems">
-//       {items.map((item) => {
-//         return (
-//           <Link to={`/item/${item.id}`}>
-//             <Item {...item} isClickable />
-//           </Link>
-//         );
-//       })}
-//     </div>
-//   );
-// }
 
-
-function ItemList() {
+function ItemList({ items }) {
   return (
-    <div className="Item_container">
-      {Products.map((Product) => (
-        <Item {...Product} />
-      ))}
-      
+    <div className="listItems">
+      {items.map((item) => {
+        return (
+          <Link to={`/item/${item.id}`}>
+            <Item {...item} isClickable />
+          </Link>
+        );
+      })}
     </div>
   );
 }
+
+
+// function ItemList() {
+//   return (
+//     <div className="Item_container">
+//       {Products.map((Product) => (
+//         <Item {...Product} />
+//       ))}
+      
+//     </div>
+//   );
+// }
 
 export default ItemList;
 

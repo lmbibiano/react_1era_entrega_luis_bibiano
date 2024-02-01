@@ -84,9 +84,9 @@ const Products = [
 
 export const getProducts = () => {
     return new Promise((resolve, reject) => {
-        if (Products.length === 0){
-            reject(new Error('No hay productos') )       
-        } 
+        if (Products.length === 0) {
+            reject(new Error('No hay productos'))
+        }
         setTimeout(() => {
             resolve(Products)
         }, 500)
@@ -95,25 +95,34 @@ export const getProducts = () => {
 
 export const getProductById = (id) => {
     return new Promise((resolve) => {
-      setTimeout(() => {
-        resolve(
-          Products.find((product) => product.id.toString() === id.toString())
-        );
-      }, 2000);
+        setTimeout(() => {
+            resolve(
+                Products.find((product) => product.id.toString() === id.toString())
+            );
+        }, 2000);
     });
-  };
-  
-
-
-
-
-  export const getProductsByCategory = (category) => {
+};
+export const getProductByCategory = (category) => {
     return new Promise((resolve) => {
-      setTimeout(() => {
-        resolve(Products.filter((product) => product.category === category));
-      }, 2000);
+        setTimeout(() => {
+            resolve(
+                Products.filter((product) => product.category === category)
+            )
+        }, 3000);
     });
-  };
+};
+
+
+
+
+
+export const getProductsByCategory = (category) => {
+    return new Promise((resolve) => {
+        setTimeout(() => {
+            resolve(Products.filter((product) => product.category === category));
+        }, 2000);
+    });
+};
 
 
 export default Products;

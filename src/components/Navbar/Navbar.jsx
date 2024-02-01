@@ -15,9 +15,9 @@ function Navbar() {
         </Link>
         <div className='nav-barlist'>
             
-                <NavLink to="/category/cerveza"><SportsBarIcon className='beer' /></NavLink>
-                <NavLink to="/category/vodka"><WineBarIcon className='wine'/></NavLink>
-                <NavLink to="/category/ron"><LiquorIcon className='liquor'/></NavLink> 
+                <Link to="/category/cerveza"><SportsBarIcon className='beer' /></Link>
+                <Link to="/category/vodka"><WineBarIcon className='wine'/></Link>
+                <Link to="/category/ron"><LiquorIcon className='liquor'/></Link> 
         </div>
 
         <CartWidget        number={6}
